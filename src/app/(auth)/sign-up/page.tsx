@@ -79,7 +79,7 @@ export default function SignUp() {
       router.replace(`/verify/${username}`);
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
-      let errorMessage = axiosError.response?.data.message ?? "There was a problem with your sign-up. Please try again.";
+      const errorMessage = axiosError.response?.data.message ?? "There was a problem with your sign-up. Please try again.";
       toast({
         title: "Sign Up Failed",
         description: errorMessage,

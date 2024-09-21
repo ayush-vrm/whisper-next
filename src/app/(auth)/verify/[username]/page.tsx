@@ -47,7 +47,7 @@ function VerifyAccount() {
         }
         catch(error){
             const axiosError = error as AxiosError<ApiResponse>;
-            let errorMessage = axiosError.response?.data.message ?? "There was a problem with verifying email. Please try again.";
+            const errorMessage = axiosError.response?.data.message ?? "There was a problem with verifying email. Please try again.";
             toast({
                 title: "Email verification Failed",
                 description: errorMessage,
