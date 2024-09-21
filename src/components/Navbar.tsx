@@ -11,7 +11,7 @@ function Navbar() {
 
     const handleSignOut = () => {
       signOut({
-        callbackUrl: '/',  // Redirect to homepage after logging out
+        callbackUrl: window.location.origin, // Redirect to homepage after logging out
       });
     };
     
