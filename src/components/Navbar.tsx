@@ -10,8 +10,9 @@ function Navbar() {
     const user: User  = session?.user as User;
 
     const handleSignOut = () => {
+      // const deployedUrl = process.env.NEXT_PUBLIC_DEPLOYED_URL || window.location.origin;
       signOut({
-        callbackUrl: window.location.origin, // Redirect to homepage after logging out
+        callbackUrl: 'https://whisper-ol6t.onrender.com/', // Redirect to homepage after logging out
       });
     };
     
